@@ -44,6 +44,7 @@ class CertificatePinningInterceptor extends Interceptor {
         headerHttp: {},
         sha: SHA.SHA256,
         allowedSHAFingerprints: _allowedSHAFingerprints,
+        timeout: _timeout,
       ).timeout(Duration(milliseconds: _timeout),
           onTimeout: onTimeout ??
               () {
